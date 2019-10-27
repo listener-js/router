@@ -5,6 +5,9 @@
     "baseUrl": ".",
     "declaration": true,
     "esModuleInterop": true,
+    "paths": {
+      "rlite-router": ["node_modules/rlite-router/rlite.js"]
+    },
     "sourceMap": true
   }
 }
