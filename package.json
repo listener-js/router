@@ -1,0 +1,60 @@
+{
+  "name": "router",
+  "version": "0.0.1",
+  "description": "Listener web router",
+  "main": "dist/router.js",
+  "scripts": {
+    "build": "rm -rf dist; tsc -b",
+    "release": "./bin/release",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/@listener-js/router.git"
+  },
+  "author": " <>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/@listener-js/router/issues"
+  },
+  "homepage": "https://github.com/@listener-js/router#readme",
+  "devDependencies": {
+    "@listener-js/listener": "3.18.0",
+    "@types/mocha": "5.2.7",
+    "@types/node": "12.11.7",
+    "@typescript-eslint/eslint-plugin": "2.5.0",
+    "@typescript-eslint/parser": "2.5.0",
+    "eslint": "6.6.0",
+    "eslint-config-prettier": "6.5.0",
+    "eslint-plugin-prettier": "3.1.1",
+    "expect": "24.9.0",
+    "husky": "3.0.9",
+    "lint-staged": "9.4.2",
+    "mocha": "6.2.2",
+    "prettier": "1.18.2",
+    "release-it": "12.4.3",
+    "rollup": "1.25.2",
+    "semver": "6.3.0",
+    "terser": "4.3.9",
+    "ts-node": "8.4.1",
+    "typescript": "3.6.4"
+  },
+  "dependencies": {
+    "rlite-router": "2.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm test"
+    }
+  },
+  "lint-staged": {
+    "*.{css,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,jsx,ts}": [
+      "eslint --ignore-path .gitignore --fix",
+      "git add"
+    ]
+  }
+}
