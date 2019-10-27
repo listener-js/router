@@ -1,5 +1,5 @@
 {
-  "name": "router",
+  "name": "@listener-js/router",
   "version": "0.0.1",
   "description": "Listener web router",
   "main": "dist/router.js",
