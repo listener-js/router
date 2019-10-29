@@ -171,11 +171,7 @@ export default class Routes {
     if (result.cb) {
       return result.cb(result.params, arg, url)
     } else {
-      const result = this.lookup("/404")
-
-      if (result.cb) {
-        return result.cb(result.params, arg, url)
-      }
+      return this.route("/404")
     }
   }
 }
