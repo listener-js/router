@@ -34,16 +34,12 @@
     "prettier": "1.18.2",
     "release-it": "12.4.3",
     "rollup": "1.25.2",
-    "rollup-plugin-commonjs": "10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
     "semver": "6.3.0",
     "terser": "4.3.9",
     "ts-node": "8.4.1",
     "typescript": "3.6.4"
   },
-  "dependencies": {
-    "rlite-router": "2.0.3"
-  },
+  "dependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged && npm test"

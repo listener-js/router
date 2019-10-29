@@ -1,16 +1,16 @@
-import router from "rlite-router"
+import Routes from "./routes"
 
 class Router {
   private routes: Record<string, Function> = {}
-  private router: (path: string) => any
+  private router: Routes
 
   public add(routes: Record<string, Function>): void {
     this.routes = Object.assign({}, this.routes, routes)
-    this.router = router(this.routes["404"], routes)
+    this.router = new Routes(routes)
   }
 
   public route(path: string): any {
-    return this.router(path)
+    return this.router.route(path)
   }
 }
 
